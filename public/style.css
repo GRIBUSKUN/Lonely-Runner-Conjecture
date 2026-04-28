@@ -1,0 +1,110 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: radial-gradient(circle at top left, #09264c, #02060e 35%);
+  color: #f4f7fb;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  min-height: 100vh;
+}
+
+#app {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+#pixi-container {
+  position: absolute;
+  inset: 0;
+}
+
+canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+#ui-panel {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  z-index: 10;
+  width: min(320px, calc(100vw - 32px));
+  padding: 18px 18px 14px;
+  border-radius: 20px;
+  background: rgba(7, 15, 35, 0.92);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.35);
+}
+
+#ui-panel .panel-header {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 14px;
+  letter-spacing: 0.02em;
+}
+
+#ui-panel label {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 14px;
+  font-size: 0.95rem;
+  color: #d2d8e8;
+}
+
+#ui-panel input[type='number'],
+#ui-panel input[type='range'] {
+  width: 100%;
+  border-radius: 12px;
+}
+
+#ui-panel input[type='number'] {
+  padding: 10px 12px;
+  width: auto;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(255, 255, 255, 0.06);
+  color: #ffffff;
+}
+
+#ui-panel input[type='range'] {
+  accent-color: #4ea4ff;
+}
+
+#ui-panel .field-note {
+  font-size: 0.85rem;
+  color: #9ab4d4;
+  margin-bottom: 12px;
+}
+
+#ui-panel .button-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+#ui-panel button {
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #4ea4ff 0%, #2f7dff 100%);
+  color: #ffffff;
+  font-weight: 700;
+  padding: 11px 12px;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.2s ease;
+}
+
+#ui-panel button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 14px 35px rgba(78, 164, 255, 0.24);
+}
+
+#ui-panel .info-block {
+  font-size: 0.9rem;
+  color: #c8d4e9;
+  line-height: 1.6;
+}
+
+#ui-panel .info-block div {
+  margin-top: 8px;
+}
