@@ -15,6 +15,8 @@ This visualization project aims to provide an interactive and intuitive represen
 ### Prerequisites
 - A modern web browser (Chrome, Firefox, etc.)
 - Familiarity with HTML, CSS, and JavaScript for understanding the code.
+### For development only
+- NodeJs
 
 ### Installation
 1. Clone the repository:
@@ -22,8 +24,14 @@ This visualization project aims to provide an interactive and intuitive represen
    git clone https://github.com/GRIBUSKUN/Lonely-Runner-Conjecture.git
    cd Lonely-Runner-Conjecture
    ```
+### For simple initialization
 2. Open `index.html` in your web browser.
-
+## For development
+2. Install the require npm packages
+   ```bash
+   npm install
+   npm run dev
+   ```
 ## Usage
 - Use the sliders to adjust the number of runners and their speeds.
 - Click "Start Simulation" to begin the visualization.
