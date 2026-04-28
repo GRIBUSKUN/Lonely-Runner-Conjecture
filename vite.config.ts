@@ -1,9 +1,12 @@
 import { defineConfig } from "vite";
-
-// https://vite.dev/config/
 export default defineConfig({
+  base: "/Lonely-Runner-Conjecture/",
   server: {
     port: 8080,
     open: true,
+  },
+  build: {
+    outDir: "dist",
+    emptyOutDir: true,
   },
 });
