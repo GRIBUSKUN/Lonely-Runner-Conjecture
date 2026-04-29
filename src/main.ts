@@ -160,7 +160,7 @@ function setStatusMessage(message: string) {
 
 playerCountInput.addEventListener("change", () => {
   const value = Number(playerCountInput.value);
-  config.playerCount = Math.max(3, Math.min(12, value));
+  config.playerCount = value > 0 ? value : config.playerCount;
   resetPlayers();
 });
 
@@ -181,9 +181,8 @@ randomizeSpeedsButton.addEventListener("click", () => {
 
 resetPlayers();
 
-const minDistance = 360 / config.playerCount;
-
 app.ticker.add(() => {
+  const minDistance = 360 / config.playerCount;
   const x = centered.x();
   const y = centered.y();
 
